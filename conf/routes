@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /wines                                  WineController.findAll
+GET     /wines/search/{query}                   WineController.findByName
+GET     /wines/{id}                             WineController.findById
+POST    /wines                                  WineController.create
+PUT     /wines/{id}                             WineController.update
+DELETE  /wines/{id}                             WineController.remove
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
